@@ -12,8 +12,7 @@ const Hero = () => {
                 </h2>
 
                 <p className="hero__subtitle">
-                    Instalaciones, reparaciones y mantenimiento para su hogar o negocio.
-                    Servicio confiable las 24 horas en su zona.
+                    Instalaciones, automatización de tanques de agua, reparaciones y mantenimiento para su hogar o negocio.
                 </p>
 
                 <div className="hero__actions">

@@ -7,26 +7,33 @@ on:
 
 jobs:
   sync:
+    if: ${{ secrets.BUSINESS_REPO_TOKEN != '' }}
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo personal
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
           persist-credentials: false
 
-      - name: Push to business repo
+      - name: Configure git user
+        run: |
+          git config --global user.name "JSoza1"
+          git config --global user.email "jsoza993@gmail.com"
+
+      - name: Remove workflows so they are not propagated to the business repo
+        run: |
+          rm -rf .github/workflows || true
+
+      - name: Add business remote and push to main
         env:
           BUSINESS_REPO_TOKEN: ${{ secrets.BUSINESS_REPO_TOKEN }}
         run: |
-          git config --global user.name "Jsoza1"
-          git config --global user.email "jsoza993@gmail.com"
-
-          # Eliminar workflows antes del push
-          rm -rf .github/workflows
-
-          git remote remove business || true
-          git remote add business https://x-access-token:${BUSINESS_REPO_TOKEN}@github.com/SozaSystems/web-electricista.git
-
-          git push business main --force
+          set -e
+          # ensure no leftover remote
+          git remote remove business 2>/dev/null || true
+          # add remote using PAT stored in secret
+          git remote add business "https://x-access-token:${BUSINESS_REPO_TOKEN}@github.com/SozaSystems/web-electricista.git"
+          # push current HEAD to main in the business repo (force to mirror)
+          git push business HEAD:main --force

@@ -1,4 +1,4 @@
-name: Sync to business repo
+name: Sincronizar a Espejo
 
 on:
   push:
@@ -6,27 +6,24 @@ on:
       - main
 
 jobs:
-  sync:
+  build:
+    # ESTA ES LA LÍNEA CLAVE
+    if: github.repository == 'Jsoza1/web-electricista'
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repo personal
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-          persist-credentials: false
-
-      - name: Push to business repo
+      
+      - name: Push to mirror
         env:
           BUSINESS_REPO_TOKEN: ${{ secrets.BUSINESS_REPO_TOKEN }}
         run: |
           git config --global user.name "Jsoza1"
           git config --global user.email "jsoza993@gmail.com"
-
-          # Eliminar workflows antes del push
+          
+          # Eliminar workflows localmente para no sobreescribir configuraciones si fuera necesario
           rm -rf .github/workflows
-
-          git remote remove business || true
+          
           git remote add business https://x-access-token:${BUSINESS_REPO_TOKEN}@github.com/SozaSystems/web-electricista.git
-
           git push business main --force

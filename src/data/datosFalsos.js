@@ -21,9 +21,9 @@ export const serviciosData = [
     },
     {
         id: 4,
-        titulo: 'Mantenimiento',
-        descripcion: 'Revisiones periódicas para comunidades y empresas. Prevención de riesgos eléctricos.',
-        icono: '🛡️'
+        titulo: 'Automatización',
+        descripcion: 'Automatización de tanques de agua, para el hogar y el negocio',
+        icono: '💧'
     },
 ];
 

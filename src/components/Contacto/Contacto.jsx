@@ -9,7 +9,7 @@ const Contacto = () => {
                     <p>Estoy disponible para resolver tus problemas eléctricos. Contáctame por WhatsApp para una respuesta rápida.</p>
 
                     <a
-                        href="https://wa.me/123456789"
+                        href="https://wa.me/5491168096768"
                         className="btn-whatsapp"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -18,8 +18,8 @@ const Contacto = () => {
                     </a>
 
                     <div className="contacto__info">
-                        <p><strong>Email:</strong> contacto@electricistadaniel.com</p>
-                        <p><strong>Teléfono:</strong> +54 9 11 1234 5678</p>
+                        <p><strong>Email:</strong> birkanomi@gmail.com</p>
+                        <p><strong>Teléfono:</strong> +54 9 11 6809 6768</p>
                         <p><strong>Zona:</strong> Norte y Oeste de Bs. As.</p>
                     </div>
                 </div>

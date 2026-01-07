@@ -12,3 +12,22 @@
 .footer__container p {
     margin: 0.2rem 0;
 }
+
+/* Efecto Neón para el enlace */
+.neon-link {
+    color: #0ea5e9;
+    /* Un azul claro base */
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.neon-link:hover {
+    color: #fff;
+    text-shadow:
+        0 0 5px #0ea5e9,
+        0 0 10px #0ea5e9,
+        0 0 20px #0ea5e9,
+        0 0 40px #0ea5e9;
+}

@@ -12,7 +12,7 @@ const Hero = () => {
                 </h2>
 
                 <p className="hero__subtitle">
-                    Instalaciones, automatización de tanques de agua, reparaciones y mantenimiento para su hogar o negocio.
+                    Instalaciones, reparaciones y mantenimiento para su hogar o negocio.
                 </p>
 
                 <div className="hero__actions">

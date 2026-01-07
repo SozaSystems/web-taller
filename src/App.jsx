@@ -8,6 +8,7 @@ import SobreMi from './components/SobreMi/SobreMi';
 import Clientes from './components/Clientes/Clientes';
 import Contacto from './components/Contacto/Contacto';
 import Footer from './components/Footer/Footer';
+import FloatingWhatsApp from './components/FloatingWhatsApp/FloatingWhatsApp';
 import { serviciosData, clientesData } from './data/datosFalsos';
 // import './App.css' // Eliminamos estilos específicos de App por ahora
 
@@ -26,6 +27,7 @@ function App() {
         <Contacto />
       </main>
       <Footer />
+      <FloatingWhatsApp />
     </div>
   )
 }

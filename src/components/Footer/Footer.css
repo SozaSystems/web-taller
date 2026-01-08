@@ -23,4 +23,5 @@
 .neon-link {
     color: var(--color-accent);
     font-weight: 800;
+    text-decoration: none;
 }

@@ -14,7 +14,7 @@ const Contacto = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <span className="whatsapp-icon">📞</span> Contactar por WhatsApp
+                        <span>📞</span> Contactar por WhatsApp
                     </a>
 
                     <div className="contacto__info">

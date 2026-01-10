@@ -6,7 +6,7 @@ const BrandsTicker = () => {
     const uniqueBrands = [
         "RENAULT", "PEUGEOT", "AUDI", "VOLVO", "KIA", "FORD", "VOLKSWAGEN",
         "FIAT", "CHERY", "ALFA ROMEO", "CHEVROLET", "CITROEN", "HONDA", "SUZUKI",
-        "SEAT", "BMW", "NISSAN"
+        "SEAT", "BMW", "NISSAN", "FERRARI"
     ];
 
     // Duplicamos x4 para pantalla ultra-wide y scroll infinito suave
